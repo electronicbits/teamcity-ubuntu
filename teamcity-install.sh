@@ -24,7 +24,7 @@ sudo chown -R teamcity /srv/TeamCity
 sudo chown -R teamcity /srv/.BuildServer
 
 # create init.d script
-sudo wget https://github.com/electronicbits/teamcity-ubuntu/blob/master/teamcity-init.sh -O /etc/init.d/teamcity
+sudo wget https://raw.githubusercontent.com/electronicbits/teamcity-ubuntu/master/teamcity-install.sh -O /etc/init.d/teamcity
 sudo chmod 775 /etc/init.d/teamcity
 sudo update-rc.d teamcity defaults
 
@@ -32,7 +32,7 @@ sudo update-rc.d teamcity defaults
 sudo mkdir -p /srv/.BuildServer/lib/jdbc
 sudo mkdir -p /srv/.BuildServer/config
 sudo wget http://jdbc.postgresql.org/download/postgresql-9.3-1101.jdbc41.jar -O /srv/.BuildServer/lib/jdbc/postgresql-9.3-1101.jdbc41.jar
-sudo wget https://github.com/electronicbits/teamcity-ubuntu/blob/master/postgres.database.properties -O /srv/.BuildServer/config/database.properties
+sudo wget https://raw.githubusercontent.com/electronicbits/teamcity-ubuntu/master/postgres.database.properties -O /srv/.BuildServer/config/database.properties
 
 # ensure owership
 sudo chown -R teamcity /srv/TeamCity
