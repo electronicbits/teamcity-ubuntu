@@ -4,7 +4,7 @@
 sudo apt-get install -y nginx
 
 # update the config
-sudo wget https://raw.githubusercontent.com/electronicbits/teamcity-ubuntu/master/ngingx.conf -O /etc/nginx/sites-available/teamcity
+sudo wget https://raw.githubusercontent.com/electronicbits/teamcity-ubuntu/master/nginx.conf -O /etc/nginx/sites-available/teamcity
 sudo mkdir -p /var/www/teamcity
 
 # create syn link
