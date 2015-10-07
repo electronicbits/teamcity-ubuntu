@@ -10,7 +10,7 @@ sudo rm -rf teamcity-install.sh
 sudo apt-get install postgresql postgresql-contrib
 
 # open the file and append the lines below
-sudo nano /etc/postgresql/9.3/main/pg_hba.conf
+	sudo nano /etc/postgresql/9.3/main/pg_hba.conf
 
 # remote access (where x.x.x.x is your IP)
 host all all x.x.x.x/32 md5
@@ -32,6 +32,9 @@ psql
 create role teamcity with login password '<password>';
 create database teamcity owner teamcity;
 
+#update database properties
+sudo nano /srv/.BuildServer/config/database.properties
+
 sudo /etc/init.d/postgresql restart
 
 <h4>Nginx</h4>
@@ -39,3 +42,10 @@ sudo /etc/init.d/postgresql restart
 sudo wget -c https://raw.githubusercontent.com/electronicbits/teamcity-ubuntu/master/nginx.sh -O nginx.sh
 sudo sh nginx.sh
 sudo rm -rf nginx.sh
+
+#update nginx config
+sudo nano /etc/nginx/sites-available/teamcity
+
+#remove default nginx server
+sudo rm -rf /etc/nginx/sites-enabled/default
+sudo rm -rf /etc/nginx/sites-available/default
