@@ -52,3 +52,8 @@ Install postgres
 	#remove default nginx server
 	sudo rm -rf /etc/nginx/sites-enabled/default
 	sudo rm -rf /etc/nginx/sites-available/default
+
+Start nginx and Teamcity
+	sudo /etc/init.d/nginx start
+	sudo /etc/init.d/teamcity start
+	

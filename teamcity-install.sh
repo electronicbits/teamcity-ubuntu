@@ -24,7 +24,7 @@ sudo chown -R teamcity /srv/TeamCity
 sudo chown -R teamcity /srv/.BuildServer
 
 # create init.d script
-sudo wget https://raw.githubusercontent.com/electronicbits/teamcity-ubuntu/master/teamcity-install.sh -O /etc/init.d/teamcity
+sudo wget https://raw.githubusercontent.com/electronicbits/teamcity-ubuntu/master/teamcity-init.sh -O /etc/init.d/teamcity
 sudo chmod 775 /etc/init.d/teamcity
 sudo update-rc.d teamcity defaults
 
