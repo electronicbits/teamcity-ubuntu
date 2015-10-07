@@ -8,7 +8,6 @@ sudo apt-get install -y openjdk-7-jre-headless
 #sudo apt-get install -y curl
 
 # install build agent dependencies
-#sudo apt-get install -y mercurial
 sudo apt-get install -y git
 
 # download teamcity
@@ -33,7 +32,7 @@ sudo update-rc.d teamcity defaults
 sudo mkdir -p /srv/.BuildServer/lib/jdbc
 sudo mkdir -p /srv/.BuildServer/config
 sudo wget http://jdbc.postgresql.org/download/postgresql-9.3-1101.jdbc41.jar -O /srv/.BuildServer/lib/jdbc/postgresql-9.3-1101.jdbc41.jar
-sudo wget https://gist.githubusercontent.com/sandcastle/9282638/raw/postgres.database.properties -O /srv/.BuildServer/config/database.properties
+sudo wget https://github.com/electronicbits/teamcity-ubuntu/blob/master/postgres.database.properties -O /srv/.BuildServer/config/database.properties
 
 # ensure owership
 sudo chown -R teamcity /srv/TeamCity
