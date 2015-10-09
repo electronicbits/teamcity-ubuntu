@@ -6,6 +6,21 @@
 	sudo sh teamcity-install.sh
 	sudo rm -rf teamcity-install.sh
 
+<h4>MySql</h4>
+
+Install mysql
+
+	sudo apt-get update
+	sudo apt-get install mysql-server
+
+	sudo mysql -u root -p
+	
+	create database teamcity default charset utf8;
+	grant all privileges on teamcity.* to <user>@localhost identified by '<password>';
+	
+	sudo /etc/init.d/mysql restart
+	
+	
 <h4>Postgres</h4>
 
 Install postgres
