@@ -31,15 +31,14 @@ sudo update-rc.d teamcity defaults
 # download mysql
 sudo mkdir -p /srv/.BuildServer/lib/jdbc
 sudo mkdir -p /srv/.BuildServer/config
-#sudo wget http://jdbc.postgresql.org/download/postgresql-9.3-1101.jdbc41.jar -O /srv/.BuildServer/lib/jdbc/postgresql-9.3-1101.jdbc41.jar
-sudo wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.36.tar.gz -O /srv/.BuildServer/lib/jdbc/mysql-connector-java-5.1.36.tar.gz
-sudo tar xvfz mysql-connector-java-5.1.36.tar.gz
-sudo mv mysql-connector-java-5.1.36/mysql-connector-java-5.1.36-bin.jar /srv/.BuildServer/lib/jdbc/
-sudo rm mysql-connector-java-5.1.36.tar.gz 
+sudo wget http://jdbc.postgresql.org/download/postgresql-9.3-1101.jdbc41.jar -O /srv/.BuildServer/lib/jdbc/postgresql-9.3-1101.jdbc41.jar
+#sudo wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.36.tar.gz -O /srv/.BuildServer/lib/jdbc/mysql-connector-java-5.1.36.tar.gz
+#sudo tar xvfz mysql-connector-java-5.1.36.tar.gz
+#sudo mv mysql-connector-java-5.1.36/mysql-connector-java-5.1.36-bin.jar /srv/.BuildServer/lib/jdbc/
+#sudo rm mysql-connector-java-5.1.36.tar.gz 
 
 
 #no need for this, as teamcity will create it automatically using using the UI at initialization
-
 #sudo wget https://raw.githubusercontent.com/electronicbits/teamcity-ubuntu/master/postgres.database.properties -O /srv/.BuildServer/config/database.properties
 
 # change security
