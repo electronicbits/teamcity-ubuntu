@@ -32,7 +32,8 @@ sudo update-rc.d teamcity defaults
 sudo mkdir -p /srv/.BuildServer/lib/jdbc
 sudo mkdir -p /srv/.BuildServer/config
 sudo wget http://jdbc.postgresql.org/download/postgresql-9.3-1101.jdbc41.jar -O /srv/.BuildServer/lib/jdbc/postgresql-9.3-1101.jdbc41.jar
-sudo wget https://raw.githubusercontent.com/electronicbits/teamcity-ubuntu/master/postgres.database.properties -O /srv/.BuildServer/config/database.properties
+#no need for this, as teamcity will create it automatically using using the UI at initialization
+#sudo wget https://raw.githubusercontent.com/electronicbits/teamcity-ubuntu/master/postgres.database.properties -O /srv/.BuildServer/config/database.properties
 
 # ensure owership
 sudo chown -R teamcity /srv/TeamCity
