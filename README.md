@@ -49,9 +49,6 @@ Install postgres
 	create role teamcity with login password '<password>';
 	create database teamcity owner teamcity;
 
-	#update database properties
-	sudo nano /srv/.BuildServer/config/database.properties
-
 <h4>Nginx</h4>
 
 	sudo wget -c https://raw.githubusercontent.com/electronicbits/teamcity-ubuntu/master/nginx.sh -O nginx.sh
