@@ -64,7 +64,7 @@ SSH into your EC2 instance and follow the instructions
 	sudo rm -rf /etc/nginx/sites-enabled/default
 	sudo rm -rf /etc/nginx/sites-available/default
 
-Start nginx and Teamcity
+Start postgres, nginx and Teamcity
 
 	sudo /etc/init.d/postgresql start
 	sudo /etc/init.d/nginx start
