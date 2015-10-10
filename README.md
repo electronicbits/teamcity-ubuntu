@@ -1,14 +1,14 @@
-# teamcity-ubuntu
+# How to install Teamcity on Ubuntu on an EC2 instance on AWS
 
-<h4>Teamcity</h4>
+SSH into your instance and follow the instructions
+
+<h4>Install Teamcity</h4>
 
 	sudo wget -c https://raw.githubusercontent.com/electronicbits/teamcity-ubuntu/master/teamcity-install.sh -O teamcity-install.sh
 	sudo sh teamcity-install.sh
 	sudo rm -rf teamcity-install.sh
 	
-<h4>Postgres</h4>
-
-Install postgres
+<h4>Install postgres</h4>
 
 	sudo apt-get update
 	sudo apt-get install postgresql postgresql-contrib
@@ -49,7 +49,7 @@ Install postgres
 	create role teamcity with login password '<password>';
 	create database teamcity owner teamcity;
 
-<h4>Nginx</h4>
+<h4>Install Nginx</h4>
 
 	sudo wget -c https://raw.githubusercontent.com/electronicbits/teamcity-ubuntu/master/nginx.sh -O nginx.sh
 	sudo sh nginx.sh
@@ -64,7 +64,7 @@ Install postgres
 
 Start nginx and Teamcity
 
-	sudo /etc/init.d/postgresql restart
-	sudo /etc/init.d/nginx restart
-	sudo /etc/init.d/teamcity restart
+	sudo /etc/init.d/postgresql start
+	sudo /etc/init.d/nginx start
+	sudo /etc/init.d/teamcity start
 	
