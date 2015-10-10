@@ -5,21 +5,6 @@
 	sudo wget -c https://raw.githubusercontent.com/electronicbits/teamcity-ubuntu/master/teamcity-install.sh -O teamcity-install.sh
 	sudo sh teamcity-install.sh
 	sudo rm -rf teamcity-install.sh
-
-<h4>MySql</h4>
-
-Install mysql
-
-	sudo apt-get update
-	sudo apt-get install mysql-server
-
-	sudo mysql -u root -p
-	
-	create database teamcity default charset utf8;
-	grant all privileges on teamcity.* to <user>@localhost identified by '<password>';
-	
-	sudo /etc/init.d/mysql restart
-	
 	
 <h4>Postgres</h4>
 
@@ -40,6 +25,19 @@ Install postgres
 	# open the file and change the lines below
 	sudo nano /etc/postgresql/9.3/main/postgresql.conf
 	listen_addresses = '*'
+	
+	# open the config file and change the config settings
+	sudo nano /etc/postgresql/9.3/main/postgresql.conf
+	
+	#shared_buffers
+	shared_buffers=512MB
+	
+	#checkpoint_segments
+	checkpoint_segments=32
+	checkpoint_completion_target=0.9
+
+	#synchronous_commit
+	synchronous_commit=off
 
 	# switch user to the postgres user
 	sudo su - postgres
@@ -53,8 +51,6 @@ Install postgres
 
 	#update database properties
 	sudo nano /srv/.BuildServer/config/database.properties
-
-	sudo /etc/init.d/postgresql restart
 
 <h4>Nginx</h4>
 
@@ -71,6 +67,7 @@ Install postgres
 
 Start nginx and Teamcity
 
-	sudo /etc/init.d/nginx start
-	sudo /etc/init.d/teamcity start
+	sudo /etc/init.d/postgresql restart
+	sudo /etc/init.d/nginx restart
+	sudo /etc/init.d/teamcity restart
 	
