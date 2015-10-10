@@ -1,6 +1,8 @@
 # How to install Teamcity on Ubuntu on an EC2 instance on AWS
 
-SSH into your instance and follow the instructions
+First create an EC2 instance using an available Ubuntu Server image
+
+SSH into your EC2 instance and follow the instructions
 
 <h4>Install Teamcity</h4>
 
