@@ -70,7 +70,7 @@ Start postgres, nginx and Teamcity
 	sudo /etc/init.d/nginx start
 	sudo /etc/init.d/teamcity start
 	
-<h4>Bonus: Installing TeamCity plugins<h4>
+<h4>Bonus: Installing TeamCity plugins</h4>
 
 More often than not, you would like to extend TeamCity's functionality with available plugins on the Internet.
 
