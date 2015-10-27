@@ -74,9 +74,21 @@ Start postgres, nginx and Teamcity
 
 More often than not, you would like to extend TeamCity's functionality with available plugins on the Internet.
 
-We happen to have a requirement to run Grunt tasks on the build nodes, hence we needed to have a plugin that executes node, npm package manager and grunt commands.
+We happen to have two requirements for extension: 
+- run Grunt tasks on the build nodes, hence we needed to have a plugin that executes node, npm package manager and grunt commands.
+- deploy the artifacts using SSH to the DEV, UAT and PROD servers.
 
-Details about the plugin are here
+Details about the plugins are here:
+
 https://github.com/jonnyzzz/TeamCity.Node
+https://confluence.jetbrains.com/display/TW/Deployer+plugin
+
+Keep a copy of each zip file on your home directory.
+
+We like to SSH to our TeamCity server from an Ubuntu desktop instance, while doing so, and keeping a copy of each plugin/zip file on your home directory, execute the following command to copy the files using ssh:
+
+	sudo scp deploy-runner.zip <remote-username>@<ip-address-server>:~
+	sudo scp jonnyzzz.node.zip <remote-username>@<ip-address-server>:~
+
 
 
