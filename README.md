@@ -87,10 +87,13 @@ https://confluence.jetbrains.com/display/TW/Deployer+plugin
 
 Keep a copy of each zip file on your home directory.
 
-We like to SSH to our TeamCity server from an Ubuntu desktop instance, while doing so, and keeping a copy of each plugin/zip file on your home directory, execute the following command to copy the files using ssh:
+We usually SSH to our TeamCity server from an Ubuntu desktop instance. While doing so, and keeping a copy of each plugin/zip file on your home directory, execute the following command to copy the files accross to TeamCity server:
 
-	sudo scp deploy-runner.zip <remote-username>@<ip-address-server>:~
-	sudo scp jonnyzzz.node.zip <remote-username>@<ip-address-server>:~
+	sudo scp deploy-runner.zip <remote-username>@<ip-address-server>:<.BuildServer/plugins>
+	sudo scp jonnyzzz.node.zip <remote-username>@<ip-address-server>:<.BuildServer/plugins>
 
+Finally restart your Teamcity server :
+	
+	sudo /etc/init.d/teamcity restart
 
 
