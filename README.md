@@ -74,7 +74,8 @@ Start postgres, nginx and Teamcity
 
 More often than not, you would like to extend TeamCity's functionality with available plugins on the Internet.
 
-We happen to have two requirements for extension: 
+We happen to have two requirements that neede such extensions: 
+
 - run Grunt tasks on the build nodes, hence we needed to have a plugin that executes node, npm package manager and grunt commands.
 - deploy the artifacts using SSH to the DEV, UAT and PROD servers.
 
